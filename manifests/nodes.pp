@@ -6,5 +6,6 @@ node 'ionut.chml.ro' {
 node 'puppet.srv.ro'{
     include puppet
     include apache
+    include ntp
 }
 
