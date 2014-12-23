@@ -26,4 +26,7 @@ class puppet {
         ensure   => '1.1.0',
         provider => 'gem',
     }
+    if ($::operatingsystem == 'CentOS') and (($::architecture == 'x86_64') or ($::architecture == 'i386')) {
+        notify { "Sistemul de operare este CentOS $::architecture": }
+    }
 }
